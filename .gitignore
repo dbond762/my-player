@@ -1,0 +1,6 @@
+# ide
+.idea/
+
+# environment files
+*.env
+!.env
