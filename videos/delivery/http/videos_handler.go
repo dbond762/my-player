@@ -9,8 +9,17 @@ type VideosHandler struct {
 	VUsecase videosUcase.VideosUsecase
 }
 
+func NewVideosHandler(app *iris.Application, vu videosUcase.VideosUsecase) {
+	handler := &VideosHandler{
+		VUsecase: vu,
+	}
+
+	app.Get("/search/", handler.Search)
+	app.Get("/search/{query}", handler.Search)
+}
+
 func (v *VideosHandler) Search(ctx iris.Context) {
-	query := ctx.Params().GetString("query")
+	query := ctx.Params().Get("query")
 
 	videos, err := v.VUsecase.Search(query)
 	if err != nil {
@@ -18,8 +27,7 @@ func (v *VideosHandler) Search(ctx iris.Context) {
 		return
 	}
 
-	i, err := ctx.JSON(videos)
-	if err != nil {
+	if _, err := ctx.JSON(videos); err != nil {
 		ctx.StatusCode(iris.StatusInternalServerError)
 		return
 	}
