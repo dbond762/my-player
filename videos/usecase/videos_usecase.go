@@ -10,14 +10,14 @@ type VideosUsecase interface {
 }
 
 type videosUsecase struct {
-	redisVideosRepo *repository.RedisVideosRepository
-	httpVideosRepo *repository.HttpVideosRepository
+	redisVideosRepo repository.RedisVideosRepository
+	httpVideosRepo  repository.HttpVideosRepository
 }
 
-func NewVideosUsecase(rv *repository.RedisVideosRepository, hv *repository.HttpVideosRepository) VideosUsecase {
+func NewVideosUsecase(rv repository.RedisVideosRepository, hv repository.HttpVideosRepository) VideosUsecase {
 	return &videosUsecase{
 		redisVideosRepo: rv,
-		httpVideosRepo: hv,
+		httpVideosRepo:  hv,
 	}
 }
 
