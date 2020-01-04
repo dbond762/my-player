@@ -1,0 +1,25 @@
+.video {
+    padding: 20px;
+    display: flex;
+    width: 800px;
+    background: #f7f7f7;
+    margin: 20px;
+}
+.video:hover {
+    background: #e7e7e7;
+    cursor: pointer;
+}
+.video__data {
+    padding: 10px 20px;
+}
+.video__name {
+    font-size: 1.4rem;
+}
+.video__date {
+    color: #444;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.video__thumbnail {
+    width: 250px;
+}

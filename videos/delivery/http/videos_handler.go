@@ -9,7 +9,7 @@ type VideosHandler struct {
 	VUsecase videosUcase.VideosUsecase
 }
 
-func NewVideosHandler(app *iris.Application, vu videosUcase.VideosUsecase) {
+func NewVideosHandler(app iris.Party, vu videosUcase.VideosUsecase) {
 	handler := &VideosHandler{
 		VUsecase: vu,
 	}

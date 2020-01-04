@@ -1,0 +1,19 @@
+.app {
+  min-height: 100vh;
+}
+.app__header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.app__page {
+  display: flex;
+  flex-grow: 1;
+}
+.app__sidebar {
+  width: 230px;
+}
+.app__content {
+  width: 100%;
+}

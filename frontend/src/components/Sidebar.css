@@ -1,0 +1,11 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+}
+.sidebar__item {
+  padding: 15px 25px;
+}
+.sidebar__item:hover {
+  background: #e7e7e7;
+}

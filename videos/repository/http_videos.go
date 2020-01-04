@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	ApiKey     = "AIzaSyBVJgyC-x6CsM-hPCYY10VfOnGOKksDK8U"
+	ApiKey     = "AIzaSyDmHiMiSFTLHUHcx2_iDe9FZA-q-GAWCv4"
 	maxResults = 25
 )
 

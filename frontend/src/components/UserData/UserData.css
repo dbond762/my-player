@@ -1,0 +1,20 @@
+.user-data {
+    font-size: 1.1rem;
+}
+.user-data__user {
+    color: #b38c7c;
+    padding: 7px;
+
+}
+.user-data__link {
+    color: #fff;
+    border: solid 2px #b38c7c;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+    background: transparent;
+}
+.user-data__link:hover {
+    background: #b38c7c;
+    color: #fff;
+}
