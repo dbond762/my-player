@@ -1,7 +1,15 @@
 package user
 
+import (
+	"github.com/dbond762/my-player/videos"
+
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+)
+
 type User struct {
-	ID       int64  `json:"id"`
-	Name     string `json:"name"`
-	Password string `json:"-"`
+	gorm.Model
+	Name     string         `gorm:"size:50;unique;not null" json:"name"`
+	Password string         `gorm:"size:60;not null" json:"-"`
+	Queries  []videos.Query `gorm:"many2many:user_queries"`
 }
